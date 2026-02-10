@@ -269,9 +269,30 @@
         <setting id="org.eclipse.jdt.core.formatter.number_of_blank_lines_at_beginning_of_method_body" value="0"/>
         <setting id="org.eclipse.jdt.core.formatter.number_of_empty_lines_to_preserve" value="1"/>
 
-        <!-- === WRAPPING E LINE SPLIT === -->
+        <!-- === WRAPPING E LINE SPLIT - MODIFICHE CHIAVE === -->
+        
+        <!-- Lunghezza massima riga: 100 caratteri -->
         <setting id="org.eclipse.jdt.core.formatter.lineSplit" value="100"/>
+        
+        <!-- MODIFICATO: NON spezzare le stringhe letterali -->
+        <setting id="org.eclipse.jdt.core.formatter.wrap_string_literal" value="false"/>
+        
+        <!-- MODIFICATO: Mantieni stringhe letterali su una riga -->
+        <setting id="org.eclipse.jdt.core.formatter.keep_string_literal_on_one_line" value="true"/>
+        
+        <!-- MODIFICATO: NON avvolgere prima delle stringhe letterali -->
+        <setting id="org.eclipse.jdt.core.formatter.wrap_before_string_literal" value="false"/>
+        
+        <!-- MODIFICATO: Avvolgimento stringhe SOLO quando troppo lunghe -->
+        <setting id="org.eclipse.jdt.core.formatter.always_wrap_after_string_concatenation" value="when_too_long"/>
+        
+        <!-- MODIFICATO: Avvolgi prima dell'operatore di concatenazione stringhe -->
         <setting id="org.eclipse.jdt.core.formatter.wrap_before_string_concatenation" value="true"/>
+        
+        <!-- MODIFICATO: Indenta concatenazione stringhe -->
+        <setting id="org.eclipse.jdt.core.formatter.indent_string_concatenation" value="true"/>
+        
+        <!-- Altri operatori - impostazioni standard -->
         <setting id="org.eclipse.jdt.core.formatter.wrap_before_additive_operator" value="true"/>
         <setting id="org.eclipse.jdt.core.formatter.wrap_before_multiplicative_operator" value="true"/>
         <setting id="org.eclipse.jdt.core.formatter.wrap_before_logical_operator" value="true"/>
@@ -282,7 +303,16 @@
         <setting id="org.eclipse.jdt.core.formatter.wrap_before_relational_operator" value="true"/>
         <setting id="org.eclipse.jdt.core.formatter.wrap_before_switch_case_arrow_operator" value="false"/>
         <setting id="org.eclipse.jdt.core.formatter.wrap_outer_expressions_when_nested" value="true"/>
-        <setting id="org.eclipse.jdt.core.formatter.join_wrapped_lines" value="true"/>
+        
+        <!-- MODIFICATO: NON unire le righe avvolte (mantiene formattazione originale) -->
+        <setting id="org.eclipse.jdt.core.formatter.join_wrapped_lines" value="false"/>
+        
+        <!-- Text block settings -->
+        <setting id="org.eclipse.jdt.core.formatter.text_block_blank_line_at_start" value="do not insert"/>
+        <setting id="org.eclipse.jdt.core.formatter.text_block_blank_line_at_end" value="do not insert"/>
+        <setting id="org.eclipse.jdt.core.formatter.text_block_keep_indent_on_empty_line" value="true"/>
+        <setting id="org.eclipse.jdt.core.formatter.text_block_continuation_indent" value="1"/>
+        
 
         <!-- === ALLINEAMENTI === -->
         <setting id="org.eclipse.jdt.core.formatter.align_assignment_statements_on_columns" value="false"/>
@@ -326,7 +356,13 @@
         <setting id="org.eclipse.jdt.core.formatter.alignment_for_resources_in_try" value="80"/>
         <setting id="org.eclipse.jdt.core.formatter.alignment_for_selector_in_method_invocation" value="16"/>
         <setting id="org.eclipse.jdt.core.formatter.alignment_for_shift_operator" value="0"/>
+        
+        <!-- MODIFICATO: Allineamento per concatenazione stringhe -->
         <setting id="org.eclipse.jdt.core.formatter.alignment_for_string_concatenation" value="16"/>
+        
+        <!-- NUOVO: Allineamento per stringhe letterali -->
+        <setting id="org.eclipse.jdt.core.formatter.alignment_for_string_literal" value="16"/>
+        
         <setting id="org.eclipse.jdt.core.formatter.alignment_for_superclass_in_type_declaration" value="16"/>
         <setting id="org.eclipse.jdt.core.formatter.alignment_for_superinterfaces_in_enum_declaration" value="16"/>
         <setting id="org.eclipse.jdt.core.formatter.alignment_for_superinterfaces_in_record_declaration" value="16"/>
@@ -338,6 +374,23 @@
         <setting id="org.eclipse.jdt.core.formatter.alignment_for_type_arguments" value="0"/>
         <setting id="org.eclipse.jdt.core.formatter.alignment_for_type_parameters" value="0"/>
         <setting id="org.eclipse.jdt.core.formatter.alignment_for_union_type_in_multicatch" value="16"/>
+
+        <!-- === IMPOSTAZIONI AGGIUNTIVE PER STRINGHE === -->
+        
+        <!-- NUOVO: NON inserire spazi nelle stringhe letterali -->
+        <setting id="org.eclipse.jdt.core.formatter.insert_space_within_string_literal" value="false"/>
+        
+        <!-- NUOVO: NON forzare formattazione stringhe -->
+        <setting id="org.eclipse.jdt.core.formatter.format_string_literals" value="false"/>
+        
+        <!-- NUOVO: Preserva formato originale stringhe -->
+        <setting id="org.eclipse.jdt.core.formatter.preserve_string_literal_format" value="true"/>
+        
+        <!-- NUOVO: Lunghezza minima per avvolgere stringhe (101 = solo se > 100) -->
+        <setting id="org.eclipse.jdt.core.formatter.minimum_string_length_to_wrap" value="101"/>
+        
+        <!-- NUOVO: Tratta stringhe come letterali (non modificare) -->
+        <setting id="org.eclipse.jdt.core.formatter.treat_string_literals_as_literals" value="true"/>
 
         <!-- === ALTRO === -->
         <setting id="org.eclipse.jdt.core.formatter.compact_else_if" value="true"/>
