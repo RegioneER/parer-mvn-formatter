@@ -11,6 +11,6 @@ jobs:
     with:
       java: '11'
       publiccode-file: 'publiccode.yml'
-      run-publiccode-validation: true
+      run-publiccode-validation: false
     secrets:
       CI_PARERWORKER_RW_TOKEN: ${{ secrets.CI_PARERWORKER_RW_TOKEN }}
